@@ -1,14 +1,45 @@
 ---
-/** biome-ignore-all lint/correctness/noUnusedImports: Astro*/
 
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Home - SossyGames2" currentPath="/">
+	<div class="max-w-4xl">
+		<h1 class="text-3xl font-bold text-gray-900 mb-6">Welcome to SossyGames2</h1>
+
+		<div class="bg-white rounded-lg shadow p-6 mb-6">
+			<h2 class="text-xl font-semibold text-gray-800 mb-4">Featured Games</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+				<div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+					<div class="bg-gray-200 h-32 rounded mb-3"></div>
+					<h3 class="font-semibold text-gray-900">Game Title 1</h3>
+					<p class="text-sm text-gray-600 mt-1">Placeholder game description</p>
+				</div>
+				<div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+					<div class="bg-gray-200 h-32 rounded mb-3"></div>
+					<h3 class="font-semibold text-gray-900">Game Title 2</h3>
+					<p class="text-sm text-gray-600 mt-1">Placeholder game description</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-white rounded-lg shadow p-6">
+			<h2 class="text-xl font-semibold text-gray-800 mb-4">Recent Activity</h2>
+			<ul class="space-y-3">
+				<li class="flex items-center text-gray-700">
+					<span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+					Played Game Title 1 - 2 hours ago
+				</li>
+				<li class="flex items-center text-gray-700">
+					<span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+					Achieved new high score - 5 hours ago
+				</li>
+				<li class="flex items-center text-gray-700">
+					<span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+					Completed level 10 - 1 day ago
+				</li>
+			</ul>
+		</div>
+	</div>
 </Layout>
